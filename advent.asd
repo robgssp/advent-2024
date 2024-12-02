@@ -4,4 +4,5 @@
   :serial t
   :components ((:file "package")
                (:file "util")
-               (:file "day1")))
+               (:file "day1")
+               (:file "day2")))
