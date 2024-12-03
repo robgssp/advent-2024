@@ -5,16 +5,9 @@
             (builtins.attrNames nixpkgs.legacyPackages)
             (system: f {
               inherit system;
-              pkgs = import nixpkgs {
-                inherit system;
-              };
+              pkgs = nixpkgs.legacyPackages.${system};
             });
     in {
-      # packages = {
-      #   robstat = pkgs.callPackage ./default.nix { };
-      #   default = self.packages.${system}.robstat;
-      # };
-
       devShells = forAllSystems ({ system, pkgs }: {
         default = pkgs.mkShell {
           packages = [
