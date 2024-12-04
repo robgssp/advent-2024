@@ -7,3 +7,6 @@
 
 (defpackage advent/day2
   (:use :common-lisp :alexandria-2 :trivia :advent))
+
+(defpackage advent/day3
+  (:use :common-lisp :alexandria-2 :trivia :advent))
