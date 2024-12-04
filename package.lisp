@@ -10,3 +10,7 @@
 
 (defpackage advent/day3
   (:use :common-lisp :alexandria-2 :trivia :advent))
+
+(defpackage advent/day4
+  (:use :common-lisp :alexandria-2 :trivia :advent
+        :org.shirakumo.fraf.math))
