@@ -1,4 +1,8 @@
 {
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs";
+  };
+
   outputs = { self, nixpkgs }:
     let forAllSystems = f:
           nixpkgs.lib.genAttrs
@@ -12,7 +16,7 @@
         default = pkgs.mkShell {
           packages = [
             (pkgs.sbcl.withPackages (pkgs: with pkgs; [
-              alexandria cl-ppcre trivia trivia_dot_ppcre
+              alexandria cl-ppcre trivia trivia_dot_ppcre _3d-math
             ])
             )
           ];
